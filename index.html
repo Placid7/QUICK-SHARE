@@ -10,13 +10,17 @@
             font-family: Arial, sans-serif;
             padding: 20px;
         }
-        input[type="text"] {
-            width: 300px;
-            padding: 5px;
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
         }
         button {
-            padding: 5px 10px;
-            margin-left: 10px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 16px;
         }
     </style>
 <style>
@@ -122,34 +126,23 @@
   <h1>PM SHRI Kendriya Vidyalaya No.1, Srinagar</h1>
   <h2>Quick & Easy Share</h2>
 </div>
-<h2>Message Box Example</h2>
+<h2>Message Box</h2>
     
-    <!-- Text box to display message -->
-    <input type="text" id="messageBox" value="Hello, this is a message!" readonly>
+    <!-- Large text area -->
+    <textarea id="messageBox" readonly>Hello, this is the current message.</textarea>
     
-    <!-- Button to update message -->
-    <button onclick="updateMessage()">Update Message</button>
+    <!-- Button to enable text area -->
+    <br>
+    <button onclick="enableTextArea()">Post New Message</button>
 
     <script>
-        function updateMessage() {
-            // Change the message in the text box
-            document.getElementById('messageBox').value = "The message has been updated!";
+        function enableTextArea() {
+            const textArea = document.getElementById('messageBox');
+            textArea.readOnly = false;       // Enable typing
+            textArea.value = "";             // Clear existing message
+            textArea.focus();                // Place cursor in text area
         }
     </script>
-
-
-
-  
-<!-- Password-protected Sheet button -->
-<button onclick="authenticate()">Post New Message</button>
-
-<button onclick="window.open('https://docs.google.com/spreadsheets/d/e/2PACX-1vSYMljGepgo-GmWyQn--GRMDB5lboAnOPIgOTN8FlWCxP434C0ink8KRUtAsdiZWbQHRW0vrU_z6IvM/pubhtml', '_blank')">
-  View Latest Message
-</button>
-
-
-
-
 
 <!-- Tiles -->
 <div class="container">
@@ -201,4 +194,5 @@ function authenticate() {
 
 </body>
 </html>
+
 
