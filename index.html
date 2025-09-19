@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PM SHRI Kendriya Vidyalaya No.1, Srinagar</title>
+  <title>Message Box Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+    </style>
 <style>
   body {
     margin: 0;
@@ -107,7 +122,24 @@
   <h1>PM SHRI Kendriya Vidyalaya No.1, Srinagar</h1>
   <h2>Quick & Easy Share</h2>
 </div>
+<h2>Message Box Example</h2>
+    
+    <!-- Text box to display message -->
+    <input type="text" id="messageBox" value="Hello, this is a message!" readonly>
+    
+    <!-- Button to update message -->
+    <button onclick="updateMessage()">Update Message</button>
 
+    <script>
+        function updateMessage() {
+            // Change the message in the text box
+            document.getElementById('messageBox').value = "The message has been updated!";
+        }
+    </script>
+
+
+
+  
 <!-- Password-protected Sheet button -->
 <button onclick="authenticate()">Post New Message</button>
 
@@ -169,3 +201,4 @@ function authenticate() {
 
 </body>
 </html>
+
