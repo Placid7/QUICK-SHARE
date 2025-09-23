@@ -1,199 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PM SHRI Kendriya Vidyalaya No.1, Srinagar</title>
-  <title>Message Box Example</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        textarea {
-            width: 100%;
-            height: 150px;
-            padding: 10px;
-            font-size: 16px;
-            resize: none;
-        }
-        button {
-            padding: 10px 15px;
-            margin-top: 10px;
-            font-size: 16px;
-        }
-    </style>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
-    text-align: center;
-  }
-
-  /* Header */
-  .header {
-    background: linear-gradient(135deg, #4A90E2, #50E3C2);
-    color: white;
-    padding: 40px 20px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    margin-bottom: 30px;
-  }
-  .header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-  }
-  .header h2 {
-    margin-top: 10px;
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: #fffde7;
-    font-style: italic;
-  }
-
-  /* Tiles container */
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 0 10px 50px;
-  }
-
-  /* Tile styling */
-  .tile {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    padding: 20px;
-    width: 200px;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .tile:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  }
-  .tile h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
-
-  /* Buttons inside tiles */
-  .tile a {
-    display: block;
-    margin: 8px 0;
-    padding: 10px;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 6px;
-    transition: background 0.3s;
-  }
-  .tile a.Upload {
-    background-color: #007bff;
-  }
-  .tile a.Upload:hover {
-    background-color: #0056b3;
-  }
-  .tile a.Download {
-    background-color: #28a745;
-  }
-  .tile a.Download:hover {
-    background-color: #1e7e34;
-  }
-
-  /* Password button */
-  button {
-    margin: 15px 0;
-    padding: 12px 25px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #ff5722;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  button:hover {
-    background-color: #e64a19;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embedded Google Sheet</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #111827;
+      color: #fff;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    iframe {
+      flex: 1;
+      border: none;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-
-<div class="header">
-  <h1>PM SHRI Kendriya Vidyalaya No.1, Srinagar</h1>
-  <h2>Quick & Easy Share</h2>
-</div>
-<h2>Message Box</h2>
-    
-    <!-- Large text area -->
-    <textarea id="messageBox" readonly>Hello, this is the current message.</textarea>
-    
-    <!-- Button to enable text area -->
-    <br>
-    <button onclick="enableTextArea()">Post New Message</button>
-
-    <script>
-        function enableTextArea() {
-            const textArea = document.getElementById('messageBox');
-            textArea.readOnly = false;       // Enable typing
-            textArea.value = "";             // Clear existing message
-            textArea.focus();                // Place cursor in text area
-        }
-    </script>
-
-<!-- Tiles -->
-<div class="container">
-
-  <!-- BV Classes -->
-  <div class="tile">
-    <h3>BV Classes</h3>
-    <a href="YOUR_Upload_LINK_HERE" target="_blank" class="Upload">Upload Files</a>
-    <a href="YOUR_Download_LINK_HERE" target="_blank" class="Download">View Files</a>
-  </div>
-
-  <!-- Classes 1 to 10 -->
-  <div class="tile"><h3>Class 1</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 2</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 3</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 4</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 5</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 6</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 7</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 8</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 9</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>Class 10</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-
-  <!-- Class XI -->
-  <div class="tile"><h3>XI Science</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>XI Humanities</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>XI Commerce</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-
-  <!-- Class XII -->
-  <div class="tile"><h3>XII Science</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>XII Humanities</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-  <div class="tile"><h3>XII Commerce</h3><a href="#" class="Upload">Upload Files</a><a href="#" class="Download">View Files</a></div>
-
-</div>
-
-<script>
-function authenticate() {
-  const pwd = prompt("Enter Password:");
-  const correctPassword = "123456"; // replace with your password
-  const sheetURL = "https://docs.google.com/spreadsheets/d/1eJDGpfJjZTxGk81r4XIcRdbl_pRVo0eNE2GpV33awew/edit?usp=sharing";
-
-  if(pwd === correctPassword){
-    window.open(sheetURL, "_blank"); // opens in a new tab
-  } else {
-    alert("Incorrect password!");
-  }
-}
-</script>
+  <header>Live Google Sheet</header>
+  
+  <!-- Replace the src URL with your own Google Sheet's published link -->
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYMljGepgo-GmWyQn--GRMDB5lboAnOPIgOTN8FlWCxP434C0ink8KRUtAsdiZWbQHRW0vrU_z6IvM/pubhtml?widget=true&amp;headers=false"></iframe>
 
 </body>
 </html>
-
-
-
